@@ -64,3 +64,7 @@ protected = ["main", "master", "develop", "trunk"]   # 这些分支永不删除
 ```bash
 uv run --with pytest python -m pytest
 ```
+
+## 许可证
+
+[Apache-2.0](LICENSE)

@@ -2,6 +2,7 @@
 name = "herdr-worktree-branch-cleanup"
 version = "0.1.0"
 description = "Herdr plugin: delete the branch of a worktree when the worktree is removed"
+license = "Apache-2.0"
 requires-python = ">=3.11"
 dependencies = []
 
