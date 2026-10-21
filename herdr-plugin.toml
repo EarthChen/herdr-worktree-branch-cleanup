@@ -1,0 +1,28 @@
+id = "worktree-branch-cleanup"
+name = "Worktree Branch Cleanup"
+version = "0.1.0"
+min_herdr_version = "0.7.5"
+description = "Delete the branch of a worktree when the worktree is removed from Herdr"
+platforms = ["macos", "linux"]
+
+[[events]]
+on = "worktree.removed"
+command = ["uv", "run", "--no-project", "python", "cleanup_branch.py"]
+
+[[actions]]
+id = "remove-worktree"
+title = "Worktree Branch Cleanup: Remove worktree (choose branch handling)"
+contexts = ["workspace"]
+command = ["uv", "run", "--no-project", "python", "remove_worktree.py", "open"]
+
+[[panes]]
+id = "remove"
+title = "Remove worktree"
+placement = "popup"
+command = ["uv", "run", "--no-project", "python", "remove_worktree.py", "ask"]
+
+[[panes]]
+id = "branch"
+title = "Delete branch?"
+placement = "popup"
+command = ["uv", "run", "--no-project", "python", "cleanup_branch.py", "prompt"]
