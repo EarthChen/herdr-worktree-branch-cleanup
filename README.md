@@ -12,8 +12,11 @@ Herdr 原生的删除 worktree 菜单（Delete worktree checkout...）不删分�
 ## 安装
 
 ```bash
-herdr plugin link /path/to/herdr-plugin
+herdr plugin install EarthChen/herdr-worktree-branch-cleanup
+herdr plugin update worktree-branch-cleanup   # 更新
 ```
+
+需要 `uv`。本地开发时用 `herdr plugin link <本地目录>`。
 
 ## 交互 action
 
